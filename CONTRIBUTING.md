@@ -35,7 +35,7 @@ There are multiple ways of how one can contribute to the efforts of the TC FHIR 
 
 ### Reporting Bugs
 
-- For reporting bugs the TC FHIR created an issue template for github, it can be found [here](https://github.com/HL7Austria/HL7-AT-FHIR-Core-R4/blob/main/.github/ISSUE_TEMPLATE/hl7-at--bug-report.md) and is available automatically if a new issue is created.
+- For reporting bugs the TC FHIR created an issue template for github, it can be found [here](https://github.com/HL7Austria/HL7-AT-FHIR-Core-R5/blob/main/.github/ISSUE_TEMPLATE/hl7-at--bug-report.md) and is available automatically if a new issue is created.
 
 #### Before Submitting A Bug Report
 
@@ -55,7 +55,7 @@ There are multiple ways of how one can contribute to the efforts of the TC FHIR 
 | Expected behavior | A clear and concise description of what you expected to happen. |
 
 ### Request New Profiles/Extensions
-- For requesting new Profiles or Extensions or features in general the TC FHIR created a feature request template for github, it can be found [here](https://github.com/HL7Austria/HL7-AT-FHIR-Core-R4/blob/main/.github/ISSUE_TEMPLATE/hl7-at--feature-request.md) and is available automatically if a new issue is created.
+- For requesting new Profiles or Extensions or features in general the TC FHIR created a feature request template for github, it can be found [here](https://github.com/HL7Austria/HL7-AT-FHIR-Core-R5/blob/main/.github/ISSUE_TEMPLATE/hl7-at--feature-request.md) and is available automatically if a new issue is created.
 - Alternatively a new Profile or an Extension can be requested by sending an email to [tc-fhir](mailto:office@hl7.at)
 - Use the issue to describe the intended use case and if applicable state some examples.
 
@@ -183,4 +183,4 @@ Since github issues cannot be created automatically out of HL7 Austria Ballot re
 	- NEG-S (negative, serious), NEG-G (negative, minor), Z-V (approval with proposal), Z-T (approval - typo), Z-F (approval with question), Z-K (approval with comment)
 
 ## Support
-We actively monitor the issues coming in through the GitHub repository at https://github.com/HL7Austria/HL7-AT-FHIR-Core-R4/issues. You are welcome to register your bugs and feature suggestions there. For questions and broader discussions, we use the TC-Austria channel on [Zulip](https://chat.fhir.org).
+We actively monitor the issues coming in through the GitHub repository at https://github.com/HL7Austria/HL7-AT-FHIR-Core-R5/issues. You are welcome to register your bugs and feature suggestions there. For questions and broader discussions, we use the TC-Austria channel on [Zulip](https://chat.fhir.org).
