@@ -17,7 +17,7 @@ jobs:
     - name: Checkout the implementation guide
       uses: actions/checkout@v2
       with:
-        repository: HL7Austria/HL7-AT-FHIR-Core-R4
+        repository: HL7Austria/HL7-AT-FHIR-Core-R5
         path: .
 
     - name: Install NPM
@@ -58,4 +58,4 @@ jobs:
         external_repository: HL7Austria/hl7austria.github.io
         publish_branch: pages
         publish_dir: ./output
-        destination_dir: ./r4-core-master-10
+        destination_dir: ./r5-core-master-10
