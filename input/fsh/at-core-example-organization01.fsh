@@ -22,7 +22,7 @@ Usage:       #example
 * contact.telecom[0].use = 	http://hl7.org/fhir/contact-point-use#work
 * contact.telecom[0].system = http://hl7.org/fhir/contact-point-system#email
 * contact.telecom[0].value = "info@amadeusspital.at"
-* contact.telecom[1].use = 	http://hl7.org/fhir/contact-point-use#home
+* contact.telecom[1].use = 	http://hl7.org/fhir/contact-point-use#mobile
 * contact.telecom[1].system = http://hl7.org/fhir/contact-point-system#phone
 * contact.telecom[1].value = "+43.6138.3453446.0"
 

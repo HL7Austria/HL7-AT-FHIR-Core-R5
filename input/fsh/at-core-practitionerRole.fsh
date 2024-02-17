@@ -13,3 +13,7 @@ Description:    "HL7® Austria FHIR® Core Profile for practitioner role data in
 * practitioner only Reference(at-core-practitioner)
 * organization only Reference(at-core-organization)
 * code from https://termgit.elga.gv.at/ValueSet/hl7-at-practitionerrole (extensible)
+
+// Address is based on the profile for the Austrian Representation of an Address
+// this should apply to the new datatype in R5 ExtendedContactDetail as well
+* contact only HL7ATCoreExtendedContactDetail
