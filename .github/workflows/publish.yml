@@ -96,8 +96,6 @@ jobs:
 
     - name: Run IG Publisher Go Publish
       run: | 
-        mkdir input-cache
-        mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
         java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source . -web ./output_published -registry ./fhir-ig-registry/fhir-ig-list.json -history ./fhir-ig-history-templates -templates ./fhir-web-templates -temp ./buildtmp
     
