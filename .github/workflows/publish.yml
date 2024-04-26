@@ -101,7 +101,7 @@ jobs:
     
     - name: Remove ig build zip directory
       run: |         
-        rm -rf ./output_published/r5-core-main/ig-build-zips
+        rm -rf ./output_published/ig-build-zips/
     
     - name: Deploy Implementation Guide
       if: success()
