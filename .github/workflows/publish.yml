@@ -125,7 +125,7 @@ jobs:
         user_email: 'automated@hl7.at'
         user_name: 'hl7austriabot'
         commit_message: 'HL7AT: Updated IG list json'
-        destination_branch_create: 'test'
+        destination_branch: 'test'
 
     - name: Deploy updated feed publication
       if: success()
