@@ -101,7 +101,7 @@ jobs:
     
     - name: Remove ig build zip directory
       run: |         
-        rm -rf ./output_published/ig-build-zips/
+        rm -rvf ./output_published/ig-build-zips/
     
     - name: Deploy Implementation Guide
       if: success()
@@ -125,7 +125,7 @@ jobs:
         user_email: 'automated@hl7.at'
         user_name: 'hl7austriabot'
         commit_message: 'HL7AT: Updated IG list json'
-        destination_branch: 'test'
+        destination_branch_create: 'test'
 
     - name: Deploy updated feed publication
       if: success()
