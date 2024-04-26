@@ -4,8 +4,7 @@ name: PublishIGWithHL7International
 
 # Run on updates to the master
 on:
-  push:
-    branches: [ ]
+  workflow_dispatch
 
 jobs:
   build:
@@ -93,6 +92,7 @@ jobs:
         cp ./publication-feed.xml ./output_published/publication-feed.xml
         cp ./package-feed.xml ./output_published/package-feed.xml
         cp ./package-registry.json ./output_published/package-registry.json
+        cp ./publish-setup.json ./output_published/publish-setup.json
 
     - name: Run IG Publisher Go Publish
       run: | 
