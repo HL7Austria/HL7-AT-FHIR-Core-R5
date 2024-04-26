@@ -99,6 +99,10 @@ jobs:
         unset DISPLAY
         java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source ${{github.workspace}} -web ${{github.workspace}}/output_published -registry ${{github.workspace}}/fhir-ig-registry/fhir-ig-list.json -history ${{github.workspace}}/fhir-ig-history-templates -templates ${{github.workspace}}/fhir-web-templates -temp ${{github.workspace}}/buildtmp
     
+    - name: Remove ig build zip directory
+      run: |         
+        rm -rf ./output_published/r5-core-main/ig-build-zips
+    
     - name: Deploy Implementation Guide
       if: success()
       uses: peaceiris/actions-gh-pages@v3
