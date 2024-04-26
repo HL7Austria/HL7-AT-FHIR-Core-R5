@@ -110,7 +110,7 @@ jobs:
         personal_token: ${{ secrets.ROBO_OLIVER }}
         external_repository: HL7Austria/hl7austria.github.io
         publish_branch: pages
-        publish_dir: ./output_published
+        publish_dir: ./output_published/r5-core-main
         destination_dir: ./r5-core-${{ steps.extract_branch.outputs.branch }}
 
     - name: Deploy updated FHIR IG List.json
