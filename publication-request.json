@@ -3,7 +3,7 @@
     "version" : "1.1.0",
     "path" : "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/1.1.0",
     "mode" : "working",
-    "status" : "active",
+    "status" : "trial-use",
     "sequence" : "STU2",
     "desc" : "An Implementation Guide for the HL7® Austria FHIR® Core Profiles.",
     "first" : true,
