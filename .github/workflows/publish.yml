@@ -97,7 +97,7 @@ jobs:
     - name: Run IG Publisher Go Publish
       run: | 
         unset DISPLAY
-        java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source . -web ./output_published -registry ./fhir-ig-registry/fhir-ig-list.json -history ./fhir-ig-history-templates -templates ./fhir-web-templates -temp ./buildtmp
+        java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source ${{github.workspace}} -web ${{github.workspace}}/output_published -registry ${{github.workspace}}/fhir-ig-registry/fhir-ig-list.json -history ${{github.workspace}}/fhir-ig-history-templates -templates ${{github.workspace}}/fhir-web-templates -temp ${{github.workspace}}/buildtmp
     
     - name: Deploy Implementation Guide
       if: success()
