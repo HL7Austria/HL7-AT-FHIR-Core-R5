@@ -9,6 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      # see https://github.com/stefanzweifel/git-auto-commit-action
+      contents: write
+
     steps:
 
     - name: Checkout the implementation guide
