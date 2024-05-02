@@ -22,6 +22,7 @@ jobs:
       with:
         repository: HL7Austria/hl7austria.github.io
         path: ./web
+        ref: pages
 
     - name: Checkout FHIR IG Web Templates
       uses: actions/checkout@v2
