@@ -10,12 +10,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    
+
     - name: Checkout the implementation guide
       uses: actions/checkout@v2
       with:
         repository: HL7Austria/HL7-AT-FHIR-Core-R5
         path: .
+
+    - name: Checkout github io project
+      uses: actions/checkout@v2
+      with:
+        repository: HL7Austria/hl7austria.github.io
+        path: ./web
 
     - name: Checkout FHIR IG Web Templates
       uses: actions/checkout@v2
@@ -43,12 +49,12 @@ jobs:
           echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
         fi
       id: extract_branch
-    
+
     - name: Extract last commit date
       shell: bash
-      run: echo "##[set-output name=date;]$(git log -1 --format="%at" | xargs -I{} date -d @{} +%d.%m.%Y)"   
+      run: echo "##[set-output name=date;]$(git log -1 --format="%at" | xargs -I{} date -d @{} +%d.%m.%Y)"
       id: extract_date
-      
+
     - uses: bluwy/substitute-string-action@v1
       id: substitute_index
       with:
@@ -62,14 +68,14 @@ jobs:
       uses: actions/setup-node@v2.1.2
       with:
         check-lastest: true
-        
+
     - name: Install Sushi
       run: sudo npm install -g fsh-sushi
 
     - name: Install Jekyll
       run: |
         sudo apt-get install jekyll
-        
+
     - name: Download IG Publisher
       uses: Legion2/download-release-action@v2.1.0
       with:
@@ -77,95 +83,32 @@ jobs:
         tag: 'latest'
         path: .
         file: publisher.jar
-        
+
     - name: Run IG Publisher
-      run: | 
+      run: |
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
         java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini
 
-    - name: Move index file and files for gopublish
-      run: |         
-        mv ./input/landing_page/_index.yml ./output/
-        mkdir ./output_published
-        cp ./publication-feed.xml ./output_published/publication-feed.xml
-        cp ./package-feed.xml ./output_published/package-feed.xml
-        cp ./package-registry.json ./output_published/package-registry.json
-        cp ./publish-setup.json ./output_published/publish-setup.json
-
     - name: Run IG Publisher Go Publish
-      run: | 
+      run: |
         unset DISPLAY
-        java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source ${{github.workspace}} -web ${{github.workspace}}/output_published -registry ${{github.workspace}}/fhir-ig-registry/fhir-ig-list.json -history ${{github.workspace}}/fhir-ig-history-templates -templates ${{github.workspace}}/fhir-web-templates -temp ${{github.workspace}}/buildtmp
-    
+        java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source ${{github.workspace}} -web ${{github.workspace}}/web -registry ${{github.workspace}}/fhir-ig-registry/fhir-ig-list.json -history ${{github.workspace}}/fhir-ig-history-templates -templates ${{github.workspace}}/fhir-web-templates -temp ${{github.workspace}}/buildtmp
+
+    - name: Move index file
+      run: |
+        mv ./input/landing_page/_index.yml ./web/r5-core-main
+
     - name: Remove ig build zip directory
-      run: |         
-        rm -rvf ./output_published/ig-build-zips/
-    
-    - name: Deploy Implementation Guide
-      if: success()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        personal_token: ${{ secrets.ROBO_OLIVER }}
-        external_repository: HL7Austria/hl7austria.github.io
-        publish_branch: pages
-        publish_dir: ./output_published/r5-core-main
-        destination_dir: ./r5-core-${{ steps.extract_branch.outputs.branch }}
+      run: |
+        rm -rvf ./web/ig-build-zips/
 
-    - name: Deploy updated FHIR IG List.json
+    - name: Deploy publication
       if: success()
-      uses: dmnemec/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.ROBO_OLIVER }}
+      uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        source_file: './fhir-ig-registry/fhir-ig-list.json'
-        destination_repo: 'HL7Austria/ig-registry'
-        destination_folder: '.'
-        user_email: 'automated@hl7.at'
-        user_name: 'hl7austriabot'
-        commit_message: 'HL7AT: Updated IG list json'
-        destination_branch: 'test'
+        commit_message: Publish IG
+        branch: pages
+        repository: ./web
 
-    - name: Deploy updated feed publication
-      if: success()
-      uses: dmnemec/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.ROBO_OLIVER }}
-      with:
-        source_file: './output_published/publication-feed.xml'
-        destination_repo: 'HL7Austria/hl7austria.github.io'
-        destination_folder: './'
-        user_email: 'automated@hl7.at'
-        user_name: 'hl7austriabot'
-        commit_message: 'HL7AT: Updated publication feed'
-        destination_branch: 'pages'
-
-    - name: Deploy updated feed package
-      if: success()
-      uses: dmnemec/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.ROBO_OLIVER }}
-      with:
-        source_file: './output_published/package-feed.xml'
-        destination_repo: 'HL7Austria/hl7austria.github.io'
-        destination_folder: './'
-        user_email: 'automated@hl7.at'
-        user_name: 'hl7austriabot'
-        commit_message: 'HL7AT: Updated package feed'
-        destination_branch: 'pages'
-
-    - name: Deploy updated package registry
-      if: success()
-      uses: dmnemec/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.ROBO_OLIVER }}
-      with:
-        source_file: './output_published/package-registry.json'
-        destination_repo: 'HL7Austria/hl7austria.github.io'
-        destination_folder: './'
-        user_email: 'automated@hl7.at'
-        user_name: 'hl7austriabot'
-        commit_message: 'HL7AT: Updated packages feed'
-        destination_branch: 'pages'
-        
