@@ -30,6 +30,7 @@ jobs:
         repository: HL7Austria/hl7austria.github.io
         path: ./web
         ref: pages
+        token: ${{ secrets.ROBO_OLIVER }}
 
     - name: Checkout FHIR IG Web Templates
       uses: actions/checkout@v2
@@ -119,6 +120,5 @@ jobs:
         commit_message: Publish IG
         branch: pages
         repository: ./web
-      env:
-        GITHUB_TOKEN: ${{ secrets.ROBO_OLIVER }}
+
 
