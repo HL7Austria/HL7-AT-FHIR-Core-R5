@@ -49,6 +49,7 @@ jobs:
       with:
         repository: HL7Austria/ig-registry
         path: ./fhir-ig-registry
+        ref: hl7at-add-publication
         token: ${{ secrets.ROBO_OLIVER }}
 
     - name: Extract last commit date
