@@ -49,29 +49,7 @@ jobs:
       with:
         repository: HL7Austria/ig-registry
         path: ./fhir-ig-registry
-
-    - name: Extract branch name
-      run: |
-        if ["${{ github.event.pull_request.head.ref }}" == ""]; then
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        else
-          echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
-        fi
-      id: extract_branch
-
-    - name: Extract last commit date
-      shell: bash
-      run: echo "##[set-output name=date;]$(git log -1 --format="%at" | xargs -I{} date -d @{} +%d.%m.%Y)"
-      id: extract_date
-
-    - uses: bluwy/substitute-string-action@v1
-      id: substitute_index
-      with:
-        _input-file: input/landing_page/_index.yml
-        _format-key: '%%key%%'
-        branch: ${{ steps.extract_branch.outputs.branch }}
-        date: ${{ steps.extract_date.outputs.date }}
-        _output-file: input/landing_page/_index.yml
+        token: ${{ secrets.ROBO_OLIVER }}
 
     - name: Install NPM
       uses: actions/setup-node@v2.1.2
@@ -105,10 +83,6 @@ jobs:
         unset DISPLAY
         java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source ${{github.workspace}} -web ${{github.workspace}}/web -registry ${{github.workspace}}/fhir-ig-registry/fhir-ig-list.json -history ${{github.workspace}}/fhir-ig-history-templates -templates ${{github.workspace}}/fhir-web-templates -temp ${{github.workspace}}/buildtmp
 
-    - name: Move index file
-      run: |
-        mv ./input/landing_page/_index.yml ./web/r5-core-main
-
     - name: Remove ig build zip directory
       run: |
         rm -rvf ./web/ig-build-zips/
@@ -120,5 +94,14 @@ jobs:
         commit_message: Publish IG
         branch: pages
         repository: ./web
+
+    - name: Deploy updated FHIR IG List.json
+      if: success()
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: HL7AT - Update IG list
+        branch: hl7at-add-publication
+        create_branch: true
+        repository: ./fhir-ig-registry
 
 
