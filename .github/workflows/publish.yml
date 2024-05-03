@@ -119,4 +119,6 @@ jobs:
         commit_message: Publish IG
         branch: pages
         repository: ./web
+      env:
+        GITHUB_TOKEN: ${{ secrets.ROBO_OLIVER }}
 
