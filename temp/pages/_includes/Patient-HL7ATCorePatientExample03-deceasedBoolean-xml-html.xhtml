@@ -1,0 +1,68 @@
+{% raw %}<pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient">Patient</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.id">id</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;HL7ATCorePatientExample03-deceasedBoolean&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Patient HL7ATCorePatientExample03-deceasedBoolean&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;HL7ATCorePatientExample03-deceasedBoolean&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcHL7ATCorePatientExample03-deceasedBoolean&quot;&gt; &lt;/a&gt;&lt;a name=&quot;HL7ATCorePatientExample03-deceasedBoolean-en-US&quot;&gt; &lt;/a&gt;&lt;p style=&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&quot;&gt;Muster Andreas Bucher  Male, DoB: 1990-12-24 ( Social Security number: 1111241261 (use: usual, ))&lt;/p&gt;&lt;hr/&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Known status of Patient&quot;&gt;Deceased:&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Known Marital status of Patient&quot;&gt;Marital Status:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}&quot;&gt;Married&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Ways to contact the Patient&quot;&gt;Contact Detail&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;tel:+43.2682.40400&quot;&gt;+43.2682.40400&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Berggasse 13a Eisenstadt Burgenland 7000 AUT (home)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Language spoken&quot;&gt;Language:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;span title=&quot;Codes:{urn:ietf:bcp:47 de}&quot;&gt;German&lt;/span&gt; (preferred)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;usual&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.type">type</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;SS&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Social Security number&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/type&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.40.0.10.1.4.3.1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1111241261&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.display">display</a>
+               <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Dachverband der österreichischen Sozialversicherungsträger&quot;/&gt;
+    &lt;/assigner&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.name">name</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Bucher&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Muster&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Andreas&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.prefix">prefix</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Dipl.Ing.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.prefix">prefix</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Dr.&quot;/&gt;
+  &lt;/name&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.telecom">telecom</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;+43.2682.40400&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;home&quot;/&gt;
+  &lt;/telecom&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.gender">gender</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;male&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/R5/datatypes.html#date">value</a>=&quot;1990-12-24&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.deceased[x]">deceasedBoolean</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.address">address</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;home&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Berggasse 13a&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Eisenstadt&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.state">state</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Burgenland&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;7000&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.country">country</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;AUT&quot;/&gt;
+  &lt;/address&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.maritalStatus">maritalStatus</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-MaritalStatus&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;M&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Married&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/maritalStatus&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.communication">communication</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.communication.language">language</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;urn:ietf:bcp:47&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;de&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/language&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.communication.preferred">preferred</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;/communication&gt;
+&lt;/Patient&gt;</code></pre>
+{% endraw %}

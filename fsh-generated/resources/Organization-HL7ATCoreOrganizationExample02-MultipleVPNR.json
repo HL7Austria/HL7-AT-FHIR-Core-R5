@@ -1,0 +1,73 @@
+{
+  "resourceType": "Organization",
+  "id": "HL7ATCoreOrganizationExample02-MultipleVPNR",
+  "meta": {
+    "profile": [
+      "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "assigner": {
+        "display": "Bundesministerium für Gesundheit"
+      },
+      "value": "urn:oid:1.2.40.0.34.3.1.1061"
+    },
+    {
+      "system": "urn:oid:1.2.40.0.10.1.4.3.2",
+      "assigner": {
+        "display": "Dachverband der österreichischen Sozialversicherungsträger"
+      },
+      "value": "833477"
+    }
+  ],
+  "name": "Landeskrankenhaus Hall in Tirol",
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "300",
+          "system": "https://termgit.elga.gv.at/ValueSet/hl7-at-organizationtype",
+          "display": "Allgemeine Krankenanstalt"
+        }
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "telecom": [
+        {
+          "use": "work",
+          "system": "email",
+          "value": "info.pkh@tirol-kliniken.at"
+        }
+      ],
+      "address": {
+        "line": [
+          "Milser Straße 10"
+        ],
+        "_line": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                "valueString": "Milser Straße"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                "valueString": "10"
+              }
+            ]
+          }
+        ],
+        "use": "work",
+        "type": "both",
+        "city": "Hall in Tirol",
+        "state": "Tirol",
+        "postalCode": "6060",
+        "country": "AUT"
+      }
+    }
+  ]
+}

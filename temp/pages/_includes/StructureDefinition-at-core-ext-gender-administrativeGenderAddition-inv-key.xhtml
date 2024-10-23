@@ -1,0 +1,6 @@
+{% raw %}<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>at-ext-gender-1</td><td>error</td><td>Extension.value[x]</td><td>The extension for the additional administrative gender codes is only applied if the administrative gender itself is set to 'other'<br/>: %resource.where(gender='other').exists() or %resource.contact.where(gender='other').exists()</td><td></td></tr>
+</table>
+{% endraw %}
