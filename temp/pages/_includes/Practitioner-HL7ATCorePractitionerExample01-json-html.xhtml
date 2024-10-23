@@ -1,0 +1,90 @@
+{% raw %}<pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner">resourceType</a>" : "Practitioner",
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.id">id</a>" : "HL7ATCorePractitionerExample01",
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-at-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-practitioner"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner HL7ATCorePractitionerExample01&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;HL7ATCorePractitionerExample01\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcHL7ATCorePractitionerExample01\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;HL7ATCorePractitionerExample01-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;a href=\&quot;http://terminology.hl7.org/6.0.2/NamingSystem-uri.html\&quot; title=\&quot;As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\&quot;&gt;Uniform Resource Identifier (URI)&lt;/a&gt;/urn:oid:1.2.40.0.34.99.4613.4, &lt;code&gt;urn:oid:1.2.40.0.10.1.4.3.2&lt;/code&gt;/987654321&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Melanie Musterärztin &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;mailto:office@musterpraxis.at\&quot;&gt;office@musterpraxis.at&lt;/a&gt;, &lt;a href=\&quot;tel:+436500987654321\&quot;&gt;+436500987654321&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: Female&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: Mozartgasse 8 Stiege 2 St. Wolfgang Salzburg 5350 AUT (work)&lt;/p&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:oid:1.2.40.0.34.99.4613.4",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+        "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.display">display</a>" : "Bundesministerium für Gesundheit"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.40.0.10.1.4.3.2",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a>" : "987654321",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+        "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.display">display</a>" : "Dachverband der österreichischen Sozialversicherungsträger"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.active">active</a>" : true,
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.name">name</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.family">family</a>" : "Musterärztin",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.given">given</a>" : [
+        "Melanie"
+      ],
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.prefix">prefix</a>" : [
+        "Prof. Dr."
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.telecom">telecom</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "office@musterpraxis.at",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "+436500987654321",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.gender">gender</a>" : "female",
+  "<a href="http://hl7.org/fhir/R5/practitioner.html#Practitioner.address">address</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.use">use</a>" : "work",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.type">type</a>" : "both",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.line">line</a>" : [
+        "Mozartgasse 8 Stiege 2"
+      ],
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.line">_line</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#string#string.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Mozartgasse"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "8"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Stiege 2"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-ext-address-additionalInformation",
+              "<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Barrierefreier Zugang"
+            }
+          ]
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.city">city</a>" : "St. Wolfgang",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.state">state</a>" : "Salzburg",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.postalCode">postalCode</a>" : "5350",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.country">country</a>" : "AUT"
+    }
+  ]
+}</code></pre>
+{% endraw %}
