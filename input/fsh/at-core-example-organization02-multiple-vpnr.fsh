@@ -18,9 +18,9 @@ Usage:       #example
 * identifier[VPNR][0].value = "438968"
 * identifier[VPNR][0].system = "urn:oid:1.2.40.0.10.1.4.3.2"
 * identifier[VPNR][0].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
-* identifier[VPNR][0].value = "833477"
-* identifier[VPNR][0].system = "urn:oid:1.2.40.0.10.1.4.3.2"
-* identifier[VPNR][0].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* identifier[VPNR][1].value = "833477"
+* identifier[VPNR][1].system = "urn:oid:1.2.40.0.10.1.4.3.2"
+* identifier[VPNR][1].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
 
 * contact.telecom[0].use = 	http://hl7.org/fhir/contact-point-use#work
 * contact.telecom[0].system = http://hl7.org/fhir/contact-point-system#email
