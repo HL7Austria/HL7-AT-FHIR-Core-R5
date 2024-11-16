@@ -13,8 +13,6 @@ Description:    "HL7® Austria FHIR® Core Profile for organization data in Aust
 // this should apply to the new datatype in R5 ExtendedContactDetail as well
 * contact only HL7ATCoreExtendedContactDetail
 
-// Changing the ValueSet binding for the type of identifiers in case identifier types will be used in the future
-* identifier.type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (extensible)
 //Slice for Identifier:
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
