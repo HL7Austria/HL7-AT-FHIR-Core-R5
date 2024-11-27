@@ -14,6 +14,3 @@ Alias: ISOStreetNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-h
 Alias: ISOAdditionalLocator = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator
 Alias: PatientBirthPlaceExtension = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 
-// outdated aliases used in previous versions:
-//Alias: ELGALaendercodesVS = https://termpub.gesundheit.gv.at:443/TermBrowser/gui/main/main.zul?loadType=ValueSet&loadName=ELGA_Laendercodes 
-//Alias: ELGAAustriaReligionVS = https://termpub.gesundheit.gv.at:443/TermBrowser/gui/main/main.zul?loadType=CodeSystem&loadName=HL7.AT:ReligionAustria
