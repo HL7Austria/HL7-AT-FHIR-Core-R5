@@ -1,9 +1,9 @@
 {
     "package-id" : "hl7.at.fhir.core.r5",
-    "version" : "1.1.0",
-    "path" : "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/1.1.0",
-    "mode" : "working",
-    "status" : "trial-use",
+    "version" : "2.0.0",
+    "path" : "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/2.0.0",
+    "mode" : "milestone",
+    "status" : "release",
     "sequence" : "STU2",
     "desc" : "An Implementation Guide for the HL7® Austria FHIR® Core Profiles.",
     "first" : true,
