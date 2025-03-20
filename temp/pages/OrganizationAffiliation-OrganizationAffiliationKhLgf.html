@@ -1,0 +1,39 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+  {% include fragment-base-navtabs.html type='OrganizationAffiliation' id='OrganizationAffiliationKhLgf' active='content' %}
+
+  <a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+{% include fragment-simpletable.html %}
+{% unless example %}
+  {% if 'OrganizationAffiliation' == 'CapabilityStatement' %}
+      <p>
+      <a href="OrganizationAffiliationKhLgf.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="OrganizationAffiliationKhLgf.openapi.json" download>Download</a>
+      </p>
+  {% endif %}
+{% endunless %}
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='OrganizationAffiliation' id='OrganizationAffiliationKhLgf' %}
+
+  {% include OrganizationAffiliation-OrganizationAffiliationKhLgf-html.xhtml %}
+
+  {% if site.data.resources[resource_].contained != nil %}
+  <h4>Contained resources</h4>
+  {% include OrganizationAffiliation-OrganizationAffiliationKhLgf-contained-index.xhtml %}
+  {% endif %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='OrganizationAffiliation' id='OrganizationAffiliationKhLgf' %}
+
+</div>
+{% include fragment-pageend.html %}

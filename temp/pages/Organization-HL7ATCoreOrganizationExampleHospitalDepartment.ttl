@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/Organization/HL7ATCoreOrganizationExampleHospitalDepartment> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HL7ATCoreOrganizationExampleHospitalDepartment"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization HL7ATCoreOrganizationExampleHospitalDepartment</b></p><a name=\"HL7ATCoreOrganizationExampleHospitalDepartment\"> </a><a name=\"hcHL7ATCoreOrganizationExampleHospitalDepartment\"> </a><a name=\"HL7ATCoreOrganizationExampleHospitalDepartment-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-at-core-organization.html\">HL7® AT Core Organization Profile</a></p></div><p><b>identifier</b>: <code>http://tbd.org/lkf-system/funktionscode</code>/112111, <code>http://tbd.org/lkf-system/funktionssubcode</code>/00</p><p><b>partOf</b>: <a href=\"Organization-HL7ATCoreOrganizationExampleHospitalFreistadt.html\">Organization Klinikum Freistadt</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://tbd.org/lkf-system/funktionscode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "112111" ]
+  ] [
+     fhir:system [ fhir:v "http://tbd.org/lkf-system/funktionssubcode"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "00" ]
+  ] ) ; # 
+  fhir:partOf [
+     fhir:link <http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/Organization/HL7ATCoreOrganizationExampleHospitalFreistadt> ;
+     fhir:reference [ fhir:v "Organization/HL7ATCoreOrganizationExampleHospitalFreistadt" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

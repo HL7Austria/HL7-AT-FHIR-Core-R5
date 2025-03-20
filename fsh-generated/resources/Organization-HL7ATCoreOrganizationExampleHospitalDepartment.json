@@ -1,0 +1,22 @@
+{
+  "resourceType": "Organization",
+  "id": "HL7ATCoreOrganizationExampleHospitalDepartment",
+  "meta": {
+    "profile": [
+      "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
+    ]
+  },
+  "identifier": [
+    {
+      "value": "112111",
+      "system": "http://tbd.org/lkf-system/funktionscode"
+    },
+    {
+      "value": "00",
+      "system": "http://tbd.org/lkf-system/funktionssubcode"
+    }
+  ],
+  "partOf": {
+    "reference": "Organization/HL7ATCoreOrganizationExampleHospitalFreistadt"
+  }
+}

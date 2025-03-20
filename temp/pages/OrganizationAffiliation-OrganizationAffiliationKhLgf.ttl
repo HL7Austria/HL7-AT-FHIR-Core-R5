@@ -1,0 +1,33 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/OrganizationAffiliation/OrganizationAffiliationKhLgf> a fhir:OrganizationAffiliation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "OrganizationAffiliationKhLgf"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OrganizationAffiliation OrganizationAffiliationKhLgf</b></p><a name=\"OrganizationAffiliationKhLgf\"> </a><a name=\"hcOrganizationAffiliationKhLgf\"> </a><a name=\"OrganizationAffiliationKhLgf-en-US\"> </a><p><b>active</b>: true</p><p><b>organization</b>: <a href=\"Organization-OrganizationLGF.html\">Organization Oö. Gesundheitsfonds</a></p><p><b>participatingOrganization</b>: <a href=\"Organization-HL7ATCoreOrganizationExampleHospitalFreistadt.html\">Organization Klinikum Freistadt</a></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/organization-role provider}\">Provider</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:organization [
+     fhir:link <http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/Organization/OrganizationLGF> ;
+     fhir:reference [ fhir:v "Organization/OrganizationLGF" ]
+  ] ; # 
+  fhir:participatingOrganization [
+     fhir:link <http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/Organization/HL7ATCoreOrganizationExampleHospitalFreistadt> ;
+     fhir:reference [ fhir:v "Organization/HL7ATCoreOrganizationExampleHospitalFreistadt" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/organization-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "provider" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
