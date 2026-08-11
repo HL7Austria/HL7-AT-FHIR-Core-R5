@@ -20,7 +20,10 @@ Description:    "HL7® Austria FHIR® Core Profile for healthcare service data i
 CodeSystem: ATFunktionscode
 Id: at-funktionscode
 Title: "CodeSystem for Austrian Funktionscodes Excerpt"
+Description: "CodeSystem for Austrian Funktionscodes Excerpt"
 * ^status = #draft
+* ^experimental = true
+* ^caseSensitive = true
 
 * #"10119" "Angiographie (IM und Angiologie)"
 * #"10914" "Atemphysiologie (IM und Pneumologie)"
@@ -33,7 +36,10 @@ Title: "CodeSystem for Austrian Funktionscodes Excerpt"
 ValueSet: ATFunktionscodeVS
 Id: at-funktionscode-vs
 Title: "ValueSet for Austrian Funktionscodes Excerpt"
+Description: "CodeSystem for Austrian Funktionscodes Excerpt"
+
 * ^status = #draft
+* ^experimental = true
 
 * include codes from system ATFunktionscode
 
