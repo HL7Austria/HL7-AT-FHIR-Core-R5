@@ -10,10 +10,43 @@ Id:             at-core-HealthcareService
 Title:          "HL7® AT Core HealthcareService Profile"
 Description:    "HL7® Austria FHIR® Core Profile for healthcare service data in Austria."
 
-* providedBy only HL7ATCoreOrganization
-* offeredIn only HL7ATCoreHealthcareService
-* location only HL7ATCoreLocation
+* providedBy only Reference(HL7ATCoreOrganization)
+* offeredIn only Reference(HL7ATCoreHealthcareService)
+* location only Reference(HL7ATCoreLocation)
 * contact only HL7ATCoreExtendedContactDetail
-* coverageArea only HL7ATCoreLocation
+* coverageArea only Reference(HL7ATCoreLocation)
+* specialty from ATFunktionscodeVS (extensible)
 
-//TODO: Vorschlag Diskutieren: Funktionscode als Specialty (statt als Identifier); Voraussetzung: hierarchisches CodeSystem existiert.
+CodeSystem: ATFunktionscode
+Id: at-funktionscode
+Title: "CodeSystem for Austrian Funktionscodes Excerpt"
+* ^status = #draft
+
+* #"10119" "Angiographie (IM und Angiologie)"
+* #"10914" "Atemphysiologie (IM und Pneumologie)"
+* #"11091" "Ergotherapie (IM und Rheumatologie)"
+* #"11114" "Rheumatologie"
+* #"12217" "Gipszimmer (Unfallchirurgie)"
+* #"12391" "Ergotherapie (Orthopädie)"
+* #"13113" "Kreißzimmer (Frauenheilkunde und Geburtshilfe)"
+
+ValueSet: ATFunktionscodeVS
+Id: at-funktionscode-vs
+Title: "ValueSet for Austrian Funktionscodes Excerpt"
+* ^status = #draft
+
+* include codes from system ATFunktionscode
+
+Instance: ExampleHealthcareService
+InstanceOf: HL7ATCoreHealthcareService
+Usage: #example
+Title: "Example HealthcareService with Specialty"
+Description: "Example of a healthcare service with an Austrian Funktionscode as specialty."
+
+* active = true
+* name = "Rheumatology Service"
+
+* providedBy = Reference(HL7ATCoreOrganizationExample01)
+* location = Reference(HL7ATCoreLocationLinz)
+
+* specialty = ATFunktionscode#"11114" "Rheumatologie"
