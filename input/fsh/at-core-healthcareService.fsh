@@ -36,7 +36,7 @@ Description: "CodeSystem for Austrian Funktionscodes Excerpt"
 ValueSet: ATFunktionscodeVS
 Id: at-funktionscode-vs
 Title: "ValueSet for Austrian Funktionscodes Excerpt"
-Description: "CodeSystem for Austrian Funktionscodes Excerpt"
+Description: "ValueSet for Austrian Funktionscodes Excerpt"
 
 * ^status = #draft
 * ^experimental = true
