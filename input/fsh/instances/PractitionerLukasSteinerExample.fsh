@@ -19,12 +19,12 @@ Usage:       #example
 * identifier[GDA-OID].value = "urn:oid:1.2.40.0.34.99.4613.5"
 * identifier[GDA-OID].assigner.display = "Bundesministerium für Gesundheit"
 
-// Austrian physician contract partner number (VPNR)
-* identifier[VPNR].system = "urn:oid:1.2.40.0.10.1.4.3.2"
-* identifier[VPNR].value = "987654322"
-* identifier[VPNR].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+//TODO: with the new triple, do we even offer VPNR as part of the Practitioner? shouldn't it always be on Organization?
+// Encrypted sector-specific personal identifier (vbPK-GH)
+* identifier[vbPK].system = "urn:oid:1.2.40.0.34.4.22.1"
+* identifier[vbPK].value = "VBPK-GH-EXAMPLE-LUKAS-STEINER-001"
+* identifier[vbPK].assigner.display = "Bundesministerium für Inneres"
 
-//TODO: vbpk
 
 // Name
 * name.family = "Steiner"
@@ -34,5 +34,9 @@ Usage:       #example
 // Administrative gender
 * gender = #male
 
-// Specialist qualification in internal medicine
-* qualification[+].code = https://termgit.elga.gv.at/CodeSystem/elga-fachaerzte#116 "Fachärztin/Facharzt für Innere Medizin"
+// Qualifications
+// Austrian Medical Chamber continuing medical education diploma
+* qualification[+].code.text = "ÖÄK-Fortbildungsdiplom (DFP-Diplom)"
+* qualification[=].period.start = "2024-01-01"
+* qualification[=].period.end = "2029-01-01"
+* qualification[=].issuer.display = "Österreichische Ärztekammer"
