@@ -39,6 +39,10 @@ Usage:       #example
 * identifier[socialSecurityNumber].value = "1234120983"
 * identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
 
+* identifier[bPK].type = http://terminology.hl7.org/CodeSystem/v2-0203#NI "National unique individual identifier"
+* identifier[bPK].system = "urn:oid:1.2.40.0.10.2.1.1.149"
+* identifier[bPK].value = "BPK-TEST-XY67889"
+* identifier[bPK].assigner.display = "Bundesministerium für Inneres"
 
 /*##############################################################################
 # Type:       FSH-File for an FHIR® Inline Instance
