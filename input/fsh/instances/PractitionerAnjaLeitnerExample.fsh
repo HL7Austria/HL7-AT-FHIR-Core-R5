@@ -17,6 +17,11 @@ Usage:       #example
 * identifier[GDA-OID].system = "urn:ietf:rfc:3986"
 * identifier[GDA-OID].value = "urn:oid:1.2.40.0.34.99.4613.8"
 
+// Encrypted sector-specific personal identifier (vbPK-GH)
+* identifier[vbPK].system = "urn:oid:1.2.40.0.34.4.22"
+* identifier[vbPK].value = "VBPK-GH-EXAMPLE-Anja-Leitner-001"
+* identifier[vbPK].assigner.display = "Bundesministerium für Inneres"
+
 // Name
 * name[+].use = #official
 * name[=].family = "Leitner"

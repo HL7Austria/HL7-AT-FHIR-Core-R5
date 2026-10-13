@@ -19,9 +19,14 @@ Usage:       #example
 * identifier[GDA-OID].value = "urn:oid:1.2.40.0.34.99.4613.10"
 
 // Fictional Hebammenregister identifier
-* identifier[=].value = "HB-EXAMPLE-001"
+* identifier[+].value = "HB-EXAMPLE-001"
 * identifier[=].system = "https://hebammenregister.example"
 * identifier[=].assigner.display = "Österreichisches Hebammengremium"
+
+// Encrypted sector-specific personal identifier (vbPK-GH)
+* identifier[vbPK].system = "urn:oid:1.2.40.0.34.4.22"
+* identifier[vbPK].value = "VBPK-GH-EXAMPLE-Sarah-Berger-001"
+* identifier[vbPK].assigner.display = "Bundesministerium für Inneres"
 
 // Name
 * name[+].use = #official
