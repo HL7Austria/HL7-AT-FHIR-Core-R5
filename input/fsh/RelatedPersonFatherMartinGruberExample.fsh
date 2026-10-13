@@ -31,7 +31,7 @@ Usage:       #example
 * telecom[=].value = "+43 660 284 73 19"
 * telecom[=].use = #mobile
 
-* address[+] = AddressFamilyGruber
+* address[+] = AddressMartinGruber
 
 // Fictional Austrian social security number
 * identifier[socialSecurityNumber].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS "Social Security number"
