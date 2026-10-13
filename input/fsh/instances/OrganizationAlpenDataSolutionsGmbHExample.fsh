@@ -52,7 +52,7 @@ Usage:       #example
 * contact[=].address.country = "AUT"
 
 // Technical support contact
-* contact[+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#TECH "Technical Support"
+* contact[+].purpose.text = "Technical Support"
 * contact[=].telecom[+].system = #email
 * contact[=].telecom[=].value = "support@alpendata.example"
 * contact[=].telecom[=].use = #work
