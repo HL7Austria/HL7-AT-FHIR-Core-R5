@@ -18,7 +18,7 @@ Usage:       #example
 
 // Service classification
 * category[+] = http://terminology.hl7.org/CodeSystem/service-category#8 "Counselling"
-* type[+].coding[+] = http://terminology.hl7.org/CodeSystem/service-type#841 "Obstetrics"
+* type[+].coding[+] = http://terminology.hl7.org/CodeSystem/service-type#482 "Obstetrics"
 * specialty[+] = http://snomed.info/sct#408470005 "Obstetrics"
 
 
