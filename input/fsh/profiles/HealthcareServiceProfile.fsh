@@ -15,4 +15,4 @@ Description:    "HL7® Austria FHIR® Core Profile for healthcare service data i
 * location only Reference(HL7ATCoreLocation)
 * contact only HL7ATCoreExtendedContactDetail
 * coverageArea only Reference(HL7ATCoreLocation)
-* specialty from HealthcareServiceSpecialtyVS (extensible)
+* specialty from HealthcareServiceSpecialtyVS (preferred)
