@@ -20,7 +20,7 @@ Usage:       #example
 
 //TODO: in Austria the code and specialty already are merged in the code system - should then both be filled?
 // Professional role
-* code[+] = https://termgit.elga.gv.at/CodeSystem/elga-fachaerzte#116 "Fachärztin/Facharzt für Innere Medizin"
+* code[+] = https://termgit.elga.gv.at/CodeSystem/elga-fachaerzte#116 "Fachärztin/Facharzt für Innere Medizin und Rheumatologie"
 
 // Medical specialty
-* specialty[+] = https://termgit.elga.gv.at/CodeSystem/elga-fachaerzte#116 "Fachärztin/Facharzt für Innere Medizin"
+* specialty[+] = http://snomed.info/sct#394810000 "Rheumatology"

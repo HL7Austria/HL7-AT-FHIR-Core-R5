@@ -19,10 +19,10 @@ Usage:       #example
 * organization = Reference(OrganizationAmadeusSpitalInnereMedizin)
 
 // Professional role
-* code[+] = https://termgit.elga.gv.at/CodeSystem/elga-fachaerzte#116 "Fachärztin/Facharzt für Innere Medizin"
+* code[+] = https://termgit.elga.gv.at/CodeSystem/elga-fachaerzte#166 "Fachärztin/Facharzt für Innere Medizin und Rheumatologie"
 
 // Organizational function
 * code[+].text = "Primar / Abteilungsvorstand Innere Medizin"
 
 // Medical specialty
-* specialty[+] = https://termgit.elga.gv.at/CodeSystem/elga-fachaerzte#116 "Fachärztin/Facharzt für Innere Medizin"
+* specialty[+] = http://snomed.info/sct#394810000 "Rheumatology"
