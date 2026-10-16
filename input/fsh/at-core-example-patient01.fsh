@@ -26,6 +26,9 @@ Usage:       #example
 * identifier[bPK].type.coding.code = HL7V2#NI
 * identifier[bPK].type.coding.display = "National unique individual identifier"
 * identifier[bPK].assigner.display = "Bundesministerium für Inneres"
+* identifier[vbPK].value = "R0g6b2VMZFNFYjBsKzhrU2RKV2pPWXlZbW5Za2kwPQ=="
+* identifier[vbPK].system = "urn:oid:1.2.40.0.34.4.22.1"
+* identifier[vbPK].type = HL7V2#ANON "Anonymous identifier"
 * identifier[localPatientId].value = "0815"
 * identifier[localPatientId].system = "urn:oid:1.2.3.4.5"
 * identifier[localPatientId].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -40,7 +43,7 @@ Usage:       #example
 * telecom[1].system = http://hl7.org/fhir/contact-point-system#phone
 * telecom[1].value = "+436501234567890"
  
-* extension[PatientReligion].extension[code].valueCodeableConcept = https://termgit.elga.gv.at/CodeSystem/hl7-at-religionaustria#162 "Pastafarianismus"
+* extension[PatientReligion].valueCodeableConcept = https://termgit.elga.gv.at/CodeSystem/hl7-at-religionaustria#162 "Pastafarianismus"
 * extension[CitizenshipExtension].extension[code].valueCodeableConcept = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3#AUT "Österreich"
 
 * address = HL7ATCoreAddressExample01
