@@ -1,1 +1,0 @@
-TBD: document known issues before ballot
