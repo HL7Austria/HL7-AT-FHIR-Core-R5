@@ -15,11 +15,6 @@ This guide is a working specification. We anticipate that it will be implemented
   - It does contain an Extension and a Profile for the ValueSet Resource, that allows to add the OID of code cystems that are referenced within the ValueSet, not just the URL reference.
   - This profile is already used by the Austrian Terminology Server.
 
-### HL7 Austria
-
-HL7® Austria is an official Affiliate of HL7® International. Within HL7® Austria the technical committee for FHIR® (TC FHIR®) is responsible to promote and disseminate the new upcoming standard HL7® FHIR®.
-The TC FHIR® deals with the standard-compliant and coordinated usage of HL7® FHIR® based communication solutions.
-It coordinates and describes necessary localizations and offers concrete help for FHIR®-compliant interfaces.
 
 ### Relation to Austrian EHR System (ELGA)
 
