@@ -1,7 +1,3 @@
-Alias: $testscript-profile-origin-types = http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types
-Alias: $testscript-profile-destination-types = http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types
-Alias: $testscript-operation-codes = http://terminology.hl7.org/CodeSystem/testscript-operation-codes
-
 Instance:    testscript-patient-create-at-core
 InstanceOf:  TestScript
 Title:       "HL7® AT Core TestScript - Patient Create"
@@ -30,7 +26,7 @@ Usage: #definition
 * test.id = "Step1-RegisterNewPatient"
 * test.name = "RegisterNewPatient"
 * test.description = "Create a new patient conformant to the AT Core Patient profile. The server assigns the resource id."
-* test.action[0].operation.type = $testscript-operation-codes#create
+* test.action[0].operation.type = TSOperationCodes#create
 * test.action[=].operation.resource = #Patient
 * test.action[=].operation.description = "POST the Patient fixture to [base]/Patient. The server assigns the resource id."
 * test.action[=].operation.accept = #"application/fhir+json"

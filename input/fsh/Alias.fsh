@@ -17,3 +17,4 @@ Alias: ISOAdditionalLocator = http://hl7.org/fhir/StructureDefinition/iso21090-A
 Alias: ISOCountryCodes = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3
 Alias: PatientBirthPlaceExtension = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: PatientBirthTimeExtension = http://hl7.org/fhir/StructureDefinition/patient-birthTime
+Alias: TSOperationCodes = http://terminology.hl7.org/CodeSystem/testscript-operation-codes

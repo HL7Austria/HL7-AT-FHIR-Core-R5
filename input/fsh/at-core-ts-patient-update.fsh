@@ -1,7 +1,3 @@
-Alias: $testscript-profile-origin-types = http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types
-Alias: $testscript-profile-destination-types = http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types
-Alias: $testscript-operation-codes = http://terminology.hl7.org/CodeSystem/testscript-operation-codes
-
 Instance: testscript-patient-update-at-core
 InstanceOf: TestScript
 Title: "HL7® AT Core TestScript - Patient Update"
@@ -31,7 +27,7 @@ Usage: #definition
 // FHIR 'update as create' answers 201 when it does not. This setup action PUTs the
 // fixture to the same id first, so the script no longer depends on whatever ran before
 // it (a fresh or reset server previously made the test fail with 201).
-* setup.action[0].operation.type = $testscript-operation-codes#update
+* setup.action[0].operation.type = TSOperationCodes#update
 * setup.action[=].operation.resource = #Patient
 * setup.action[=].operation.description = "PUT the Patient fixture to [base]/Patient/${patientResourceId} so the resource exists before the update test runs. This relies on the FHIR 'update as create' interaction and therefore succeeds whether or not the resource was already present on the server. Without it the test operation would create the resource itself and the server would answer 201 instead of 200."
 * setup.action[=].operation.accept = #"application/fhir+json"
@@ -53,7 +49,7 @@ Usage: #definition
 * test.id = "Step1-UpdatePatient"
 * test.name = "UpdatePatient"
 * test.description = "Update a patient resource conformant to the AT Core Patient profile."
-* test.action[0].operation.type = $testscript-operation-codes#update
+* test.action[0].operation.type = TSOperationCodes#update
 * test.action[=].operation.resource = #Patient
 * test.action[=].operation.description = "PUT the Patient fixture to [base]/Patient/${patientResourceId}."
 * test.action[=].operation.accept = #"application/fhir+json"
