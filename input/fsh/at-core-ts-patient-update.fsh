@@ -29,7 +29,7 @@ Usage: #definition
 * profile = "https://fhir.hl7.at/core/r5/StructureDefinition/at-core-patient"
 * variable.name = "patientResourceId"
 * variable.defaultValue = "HL7ATCorePatientUpdateTestExample"
-* variable.description = "Enter the patient FHIR resource id the FHIR Client will send to the FHIR Server. It MUST be identical to Patient.id inside the fixture body, otherwise the server returns HTTP 400 Bad Request (FHIR R4 RESTful 'update' interaction)."
+* variable.description = "Enter the patient FHIR resource id the FHIR Client will send to the FHIR Server. It MUST be identical to Patient.id inside the fixture body, otherwise the server returns HTTP 400 Bad Request."
 * variable.hint = "[Resource Id]"
 // The test below asserts a strict 200, which only holds if the target already exists:
 // FHIR 'update as create' answers 201 when it does not. This setup action PUTs the
