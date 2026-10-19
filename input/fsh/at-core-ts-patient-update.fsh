@@ -17,10 +17,6 @@ Usage: #definition
 * contact.telecom.system = #email
 * contact.telecom.value = "tc-fhir@hl7.at"
 * copyright = "This FHIR Test Script is licensed under Creative Commons (CC0) 'No Rights Reserved'. Learn more at https://creativecommons.org/licenses"
-* origin.index = 1
-* origin.profile = $testscript-profile-origin-types#FHIR-Client
-* destination.index = 1
-* destination.profile = $testscript-profile-destination-types#FHIR-Server
 * fixture.id = "patient-update"
 * fixture.autocreate = false
 * fixture.autodelete = false
