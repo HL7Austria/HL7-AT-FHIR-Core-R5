@@ -2,6 +2,7 @@
   <li><a href="index.html">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li><a href="artifacts.html">Artifacts</a></li>
+  <li><a href="tests.html">Tests</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">About<b class="caret"> </b></a>
     <ul class="dropdown-menu">
